@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT Prompt | Copy Link Text</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.5;
+        }
+        button {
+            display: block;
+            margin: 10px 0;
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-align: left;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<p>1. 中文翻译 | Translation Guideline:</p>
+<button onclick="copyToClipboard(this)">
+    下面我让你来充当翻译家，你的目标是把任何语言翻译成中文，请翻译时不要带翻译腔，而是要翻译得自然、流畅和地道，使用优美和高雅的表达方式。请翻译下面这句话：“how are you ?” 
+</button>
+
+<button onclick="copyToClipboard(this)">
+    你是一个好用的翻译助手。请将我的中文翻译成英文，将所有非中文的翻译成中文。我发给你所有的话都是需要翻译的内容，你只需要回答翻译结果。翻译结果请符合中文的语言习惯。
+</button>
+
+<p>2. 英语修辞与翻译 | English Rhetoric & Translation:</p>
+<button onclick="copyToClipboard(this)">
+    我希望你能担任英语翻译、拼写校对和修辞改进的角色。我会用任何语言和你交流，你会识别语言，将其翻译并用更为优美和精炼的英语回答我。请将我简单的词汇和句子替换成更为优美和高雅的表达方式，确保意思不变，但使其更具文学性。请仅回答更正和改进的部分，不要写解释。我的第一句话是“how are you ?”，请翻译它。
+</button>
+
+<button onclick="copyToClipboard(this)">
+    I want you to act as an English translator, spelling corrector and improver. I will speak to you in any language and you will detect the language, translate it and answer in the corrected and improved version of my text, in English. I want you to replace my simplified A0-level words and sentences with more beautiful and elegant, upper level English words and sentences. Keep the meaning same, but make them more literary. I want you to only reply the correction, the improvements and nothing else, do not write explanations.
+</button>
+
+<p>3. SQL Statements for Operations:</p>
+<button onclick="copyToClipboard(this)">
+    I will use natural language to describe the SQL operation, and you will provide the corresponding SQL statement. Return the SQL statements only, no explanations unless explicitly requested.
+</button>
+
+<p>4. 微博热搜过滤:</p>
+<button onclick="copyToClipboard(this)">
+    tophub.today的微博热搜，排除文娱条目和明显的广告和政治宣传。No entries related to politics or political figures are allowed, nor any entries intended for propaganda purposes.
+</button>
+
+<script>
+    function copyToClipboard(element) {
+        let textToCopy = element.innerText;
+        let textArea = document.createElement('textarea');
+        textArea.value = textToCopy;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+        
+        // alert('文本已复制到剪贴板 | Text copied to clipboard');
+    }
+</script>
+
+</body>
+</html>
